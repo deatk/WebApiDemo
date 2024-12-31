@@ -1,8 +1,15 @@
 using Serilog;
 using WebApiDemoServices.Interfaces;
 using WebApiDemoServices;
+using WebApiDemoRepositories;
 
 var builder = WebApplication.CreateBuilder(args);
+
+// Add file connections.json
+builder.Configuration.AddJsonFile("connections.json", optional: false, reloadOnChange: true);
+
+// Add MongoDB repository
+builder.Services.AddMongoDbRepository(builder.Configuration);
 
 // Set up Serilog with Console and File sinks
 Log.Logger = new LoggerConfiguration()

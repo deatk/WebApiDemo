@@ -1,0 +1,7 @@
+{
+    "MongoDb": {
+      "ConnectionString": "your-mongodb-connection-string",
+      "DatabaseName": "your-database-name"
+    }
+  }
+  
