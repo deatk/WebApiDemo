@@ -1,0 +1,24 @@
+using Microsoft.AspNetCore.Mvc;
+using WebApiDemoServices.Interfaces;
+
+namespace WebApiDemo.Controllers
+{
+    [ApiController]
+    [Route("[controller]")]
+    public class ContactController : ControllerBase
+    {
+        private readonly IContactService _contactService;
+
+        public ContactController(IContactService contactService)
+        {
+            _contactService = contactService;
+        }
+
+        [HttpGet("GetContact")]
+        public async Task<IActionResult> GetContact()
+        {
+            var contact = await _contactService.GetContact();
+            return Ok(contact);
+        }
+    }
+}
