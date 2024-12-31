@@ -1,0 +1,14 @@
+2024-12-31 16:45:57.480 +01:00 [INF] Now listening on: http://localhost:5172
+2024-12-31 16:45:57.532 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-31 16:45:57.534 +01:00 [INF] Hosting environment: Development
+2024-12-31 16:45:57.535 +01:00 [INF] Content root path: C:\Users\aless\Documents\Projects\WebApiDemo\WebApiDemo
+2024-12-31 16:46:18.035 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5172/Contact/GetContact - null null
+2024-12-31 16:46:18.080 +01:00 [INF] Executing endpoint 'WebApiDemo.Controllers.ContactController.GetContact (WebApiDemo)'
+2024-12-31 16:46:18.105 +01:00 [INF] Route matched with {action = "GetContact", controller = "Contact"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetContact() on controller WebApiDemo.Controllers.ContactController (WebApiDemo).
+2024-12-31 16:46:18.136 +01:00 [INF] Getting contact...
+2024-12-31 16:46:18.248 +01:00 [INF] Contact retrieved successfully
+2024-12-31 16:46:18.260 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-12-31 16:46:18.269 +01:00 [INF] Executed action WebApiDemo.Controllers.ContactController.GetContact (WebApiDemo) in 131.0076ms
+2024-12-31 16:46:18.283 +01:00 [INF] Executed endpoint 'WebApiDemo.Controllers.ContactController.GetContact (WebApiDemo)'
+2024-12-31 16:46:18.287 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5172/Contact/GetContact - 200 null text/plain; charset=utf-8 253.8294ms
+2024-12-31 16:46:23.031 +01:00 [INF] Application is shutting down...

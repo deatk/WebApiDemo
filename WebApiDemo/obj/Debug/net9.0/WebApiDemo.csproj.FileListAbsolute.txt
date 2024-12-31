@@ -34,3 +34,16 @@ C:\Users\aless\Documents\Projects\WebApiDemo\WebApiDemo\obj\Debug\net9.0\refint\
 C:\Users\aless\Documents\Projects\WebApiDemo\WebApiDemo\obj\Debug\net9.0\WebApiDemo.pdb
 C:\Users\aless\Documents\Projects\WebApiDemo\WebApiDemo\obj\Debug\net9.0\WebApiDemo.genruntimeconfig.cache
 C:\Users\aless\Documents\Projects\WebApiDemo\WebApiDemo\obj\Debug\net9.0\ref\WebApiDemo.dll
+C:\Users\aless\Documents\Projects\WebApiDemo\WebApiDemo\bin\Debug\net9.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\aless\Documents\Projects\WebApiDemo\WebApiDemo\bin\Debug\net9.0\Serilog.dll
+C:\Users\aless\Documents\Projects\WebApiDemo\WebApiDemo\bin\Debug\net9.0\Serilog.AspNetCore.dll
+C:\Users\aless\Documents\Projects\WebApiDemo\WebApiDemo\bin\Debug\net9.0\Serilog.Extensions.Hosting.dll
+C:\Users\aless\Documents\Projects\WebApiDemo\WebApiDemo\bin\Debug\net9.0\Serilog.Extensions.Logging.dll
+C:\Users\aless\Documents\Projects\WebApiDemo\WebApiDemo\bin\Debug\net9.0\Serilog.Formatting.Compact.dll
+C:\Users\aless\Documents\Projects\WebApiDemo\WebApiDemo\bin\Debug\net9.0\Serilog.Settings.Configuration.dll
+C:\Users\aless\Documents\Projects\WebApiDemo\WebApiDemo\bin\Debug\net9.0\Serilog.Sinks.Console.dll
+C:\Users\aless\Documents\Projects\WebApiDemo\WebApiDemo\bin\Debug\net9.0\Serilog.Sinks.Debug.dll
+C:\Users\aless\Documents\Projects\WebApiDemo\WebApiDemo\bin\Debug\net9.0\Serilog.Sinks.File.dll
+C:\Users\aless\Documents\Projects\WebApiDemo\WebApiDemo\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\aless\Documents\Projects\WebApiDemo\WebApiDemo\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\aless\Documents\Projects\WebApiDemo\WebApiDemo\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
