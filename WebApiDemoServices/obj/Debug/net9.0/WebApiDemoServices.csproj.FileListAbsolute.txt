@@ -1,0 +1,12 @@
+C:\Users\aless\Documents\Projects\WebApiDemo\WebApiDemoServices\bin\Debug\net9.0\WebApiDemoServices.deps.json
+C:\Users\aless\Documents\Projects\WebApiDemo\WebApiDemoServices\bin\Debug\net9.0\WebApiDemoServices.dll
+C:\Users\aless\Documents\Projects\WebApiDemo\WebApiDemoServices\bin\Debug\net9.0\WebApiDemoServices.pdb
+C:\Users\aless\Documents\Projects\WebApiDemo\WebApiDemoServices\obj\Debug\net9.0\WebApiDemoServices.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aless\Documents\Projects\WebApiDemo\WebApiDemoServices\obj\Debug\net9.0\WebApiDemoServices.AssemblyInfoInputs.cache
+C:\Users\aless\Documents\Projects\WebApiDemo\WebApiDemoServices\obj\Debug\net9.0\WebApiDemoServices.AssemblyInfo.cs
+C:\Users\aless\Documents\Projects\WebApiDemo\WebApiDemoServices\obj\Debug\net9.0\WebApiDemoServices.csproj.CoreCompileInputs.cache
+C:\Users\aless\Documents\Projects\WebApiDemo\WebApiDemoServices\obj\Debug\net9.0\WebApiDemoServices.sourcelink.json
+C:\Users\aless\Documents\Projects\WebApiDemo\WebApiDemoServices\obj\Debug\net9.0\WebApiDemoServices.dll
+C:\Users\aless\Documents\Projects\WebApiDemo\WebApiDemoServices\obj\Debug\net9.0\refint\WebApiDemoServices.dll
+C:\Users\aless\Documents\Projects\WebApiDemo\WebApiDemoServices\obj\Debug\net9.0\WebApiDemoServices.pdb
+C:\Users\aless\Documents\Projects\WebApiDemo\WebApiDemoServices\obj\Debug\net9.0\ref\WebApiDemoServices.dll
