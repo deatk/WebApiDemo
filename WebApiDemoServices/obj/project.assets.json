@@ -420,6 +420,16 @@
           "lib/net7.0/ZstdSharp.dll": {}
         }
       },
+      "WebApiDemoModels/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/WebApiDemoModels.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/WebApiDemoModels.dll": {}
+        }
+      },
       "WebApiDemoRepositories/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
@@ -428,7 +438,8 @@
           "Microsoft.Extensions.Configuration.Binder": "9.0.0",
           "Microsoft.Extensions.Configuration.Json": "9.0.0",
           "Microsoft.Extensions.DependencyInjection": "9.0.0",
-          "MongoDB.Driver": "3.1.0"
+          "MongoDB.Driver": "3.1.0",
+          "WebApiDemoModels": "1.0.0"
         },
         "compile": {
           "bin/placeholder/WebApiDemoRepositories.dll": {}
@@ -1144,6 +1155,11 @@
         "zstdsharp.port.nuspec"
       ]
     },
+    "WebApiDemoModels/1.0.0": {
+      "type": "project",
+      "path": "../WebApiDemoModels/WebApiDemoModels.csproj",
+      "msbuildProject": "../WebApiDemoModels/WebApiDemoModels.csproj"
+    },
     "WebApiDemoRepositories/1.0.0": {
       "type": "project",
       "path": "../WebApiDemoRepositories/WebApiDemoRepositories.csproj",
@@ -1153,6 +1169,7 @@
   "projectFileDependencyGroups": {
     "net9.0": [
       "MongoDB.Driver >= 3.1.0",
+      "WebApiDemoModels >= 1.0.0",
       "WebApiDemoRepositories >= 1.0.0"
     ]
   },
@@ -1181,6 +1198,9 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
+            "C:\\Users\\aless\\Documents\\Projects\\WebApiDemo\\WebApiDemoModels\\WebApiDemoModels.csproj": {
+              "projectPath": "C:\\Users\\aless\\Documents\\Projects\\WebApiDemo\\WebApiDemoModels\\WebApiDemoModels.csproj"
+            },
             "C:\\Users\\aless\\Documents\\Projects\\WebApiDemo\\WebApiDemoRepositories\\WebApiDemoRepositories.csproj": {
               "projectPath": "C:\\Users\\aless\\Documents\\Projects\\WebApiDemo\\WebApiDemoRepositories\\WebApiDemoRepositories.csproj"
             }

@@ -3,6 +3,7 @@ obj/
 WebApiDemo/bin/Debug/net9.0/
 WebApiDemoRepositories/bin/Debug/net9.0/
 WebApiDemoServices/bin/Debug/net9.0/
+WebApiDemo/logs/
 
 # Ignore MongoDB connection file
 connections.json

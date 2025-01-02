@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\WebApiDemoRepositories\WebApiDemoRepositories.csproj" />
+    <ProjectReference Include="..\WebApiDemoModels\WebApiDemoModels.csproj" />
   </ItemGroup>
 
 </Project>

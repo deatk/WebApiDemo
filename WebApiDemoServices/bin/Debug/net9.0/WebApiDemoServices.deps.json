@@ -9,6 +9,7 @@
       "WebApiDemoServices/1.0.0": {
         "dependencies": {
           "MongoDB.Driver": "3.1.0",
+          "WebApiDemoModels": "1.0.0",
           "WebApiDemoRepositories": "1.0.0"
         },
         "runtime": {
@@ -226,13 +227,22 @@
           }
         }
       },
+      "WebApiDemoModels/1.0.0": {
+        "runtime": {
+          "WebApiDemoModels.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "WebApiDemoRepositories/1.0.0": {
         "dependencies": {
           "Microsoft.Extensions.Configuration": "9.0.0",
           "Microsoft.Extensions.Configuration.Binder": "9.0.0",
           "Microsoft.Extensions.Configuration.Json": "9.0.0",
           "Microsoft.Extensions.DependencyInjection": "9.0.0",
-          "MongoDB.Driver": "3.1.0"
+          "MongoDB.Driver": "3.1.0",
+          "WebApiDemoModels": "1.0.0"
         },
         "runtime": {
           "WebApiDemoRepositories.dll": {
@@ -423,6 +433,11 @@
       "sha512": "sha512-U9Ix4l4cl58Kzz1rJzj5hoVTjmbx1qGMwzAcbv1j/d3NzrFaESIurQyg+ow4mivCgkE3S413y+U9k4WdnEIkRA==",
       "path": "zstdsharp.port/0.7.3",
       "hashPath": "zstdsharp.port.0.7.3.nupkg.sha512"
+    },
+    "WebApiDemoModels/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "WebApiDemoRepositories/1.0.0": {
       "type": "project",

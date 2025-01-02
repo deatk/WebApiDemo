@@ -419,6 +419,16 @@
         "runtime": {
           "lib/net7.0/ZstdSharp.dll": {}
         }
+      },
+      "WebApiDemoModels/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/WebApiDemoModels.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/WebApiDemoModels.dll": {}
+        }
       }
     }
   },
@@ -1126,6 +1136,11 @@
         "zstdsharp.port.0.7.3.nupkg.sha512",
         "zstdsharp.port.nuspec"
       ]
+    },
+    "WebApiDemoModels/1.0.0": {
+      "type": "project",
+      "path": "../WebApiDemoModels/WebApiDemoModels.csproj",
+      "msbuildProject": "../WebApiDemoModels/WebApiDemoModels.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -1134,7 +1149,8 @@
       "Microsoft.Extensions.Configuration.Binder >= 9.0.0",
       "Microsoft.Extensions.Configuration.Json >= 9.0.0",
       "Microsoft.Extensions.DependencyInjection >= 9.0.0",
-      "MongoDB.Driver >= 3.1.0"
+      "MongoDB.Driver >= 3.1.0",
+      "WebApiDemoModels >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -1161,7 +1177,11 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\aless\\Documents\\Projects\\WebApiDemo\\WebApiDemoModels\\WebApiDemoModels.csproj": {
+              "projectPath": "C:\\Users\\aless\\Documents\\Projects\\WebApiDemo\\WebApiDemoModels\\WebApiDemoModels.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

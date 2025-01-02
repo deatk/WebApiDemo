@@ -1,38 +1,101 @@
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging; // Importa il namespace per il logging
-using WebApiDemoServices.Interfaces; // Importa l'interfaccia dal progetto dei servizi
+using WebApiDemoServices.Interfaces;
+using WebApiDemoModels;
 
 namespace WebApiDemo.Controllers
 {
     [ApiController]
-    [Route("Contact")]
+    [Route("api/[controller]")]
     public class ContactController : ControllerBase
     {
         private readonly IContactService _contactService;
-        private readonly ILogger<ContactController> _logger; // Aggiungi il logger
 
-        // Modifica il costruttore per accettare ILogger<ContactController>
-        public ContactController(IContactService contactService, ILogger<ContactController> logger)
+        public ContactController(IContactService contactService)
         {
             _contactService = contactService;
-            _logger = logger; // Inizializza il logger
         }
 
-        [HttpGet("GetContact")]
-        public async Task<IActionResult> GetContact()
+        // GET: api/contact
+        [HttpGet]
+        public async Task<IActionResult> GetAll()
         {
-            _logger.LogInformation("Getting contact..."); // Usa il logger per registrare informazioni
+            var contacts = await _contactService.GetAllAsync();
+            return Ok(contacts);
+        }
 
-            var contact = await _contactService.GetContact();
+        // GET: api/contact/{id}
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetById(string id)
+        {
+            var contact = await _contactService.GetByIdAsync(id);
 
             if (contact == null)
-            {
-                _logger.LogWarning("Contact not found");
                 return NotFound();
-            }
 
-            _logger.LogInformation("Contact retrieved successfully");
             return Ok(contact);
+        }
+
+        // GET: api/contact/by-phone/{phoneNumber}
+        [HttpGet("by-phone/{phoneNumber}")]
+        public async Task<IActionResult> GetByPhoneNumber(string phoneNumber)
+        {
+            var contact = await _contactService.GetByPhoneNumberAsync(phoneNumber);
+
+            if (contact == null)
+                return NotFound();
+
+            return Ok(contact);
+        }
+
+        // GET: api/contact/by-email/{email}
+        [HttpGet("by-email/{email}")]
+        public async Task<IActionResult> GetByEmail(string email)
+        {
+            var contact = await _contactService.GetByEmailAsync(email);
+
+            if (contact == null)
+                return NotFound();
+
+            return Ok(contact);
+        }
+
+        // POST: api/contact
+        [HttpPost]
+        public async Task<IActionResult> Create([FromBody] Contact contact)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            var createdContact = await _contactService.CreateAsync(contact);
+
+            return CreatedAtAction(nameof(GetById), new { id = createdContact.Id }, createdContact);
+        }
+
+        // PUT: api/contact/{id}
+        [HttpPut("{id}")]
+        public async Task<IActionResult> Update(string id, [FromBody] Contact contact)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            var updated = await _contactService.UpdateAsync(id, contact);
+
+            if (!updated)
+                return NotFound();
+
+            return NoContent();
+        }
+
+        // DELETE: api/contact/{id}
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(string id)
+        {
+            var deleted = await _contactService.DeleteAsync(id);
+
+            if (!deleted)
+                return NotFound();
+
+            return NoContent();
         }
     }
 }
