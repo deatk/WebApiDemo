@@ -1,10 +1,11 @@
 using System.ComponentModel.DataAnnotations;
 using WebApiDemoModels.Enums;
 
-namespace WebApiDemoModels
+namespace WebApiDemoModels.Requests
 {
-    public class Order
+    public class UpdateOrderRequest
     {
+        [Required   ]
         public string Id { get; set; }
         
         public string ContactId { get; set; }

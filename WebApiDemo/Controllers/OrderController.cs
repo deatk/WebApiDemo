@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
 using WebApiDemoServices.Interfaces;
 using WebApiDemoModels;
+using WebApiDemoModels.Requests;
+using AutoMapper;
 
 namespace WebApiDemo.Controllers
 {
@@ -9,10 +11,12 @@ namespace WebApiDemo.Controllers
     public class OrderController : ControllerBase
     {
         private readonly IOrderService _orderService;
+        private readonly IMapper _mapper;
 
-        public OrderController(IOrderService orderService)
+        public OrderController(IOrderService orderService, IMapper mapper)
         {
             _orderService = orderService;
+            _mapper = mapper;
         }
 
         [HttpGet]
@@ -32,16 +36,19 @@ namespace WebApiDemo.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> CreateOrderAsync([FromBody] Order order)
+        public async Task<IActionResult> CreateOrderAsync([FromBody] CreateOrderRequest createOrderRequest)
         {
-            var createdOrder = await _orderService.CreateAsync(order);
+            var createOrder = _mapper.Map<Order>(createOrderRequest);
+            var createdOrder = await _orderService.CreateAsync(createOrder);
             return CreatedAtAction(nameof(GetOrderByIdAsync), new { id = createdOrder.Id }, createdOrder);
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateOrderAsync(string id, [FromBody] Order order)
+
+        public async Task<IActionResult> UpdateOrderAsync(string id, [FromBody] UpdateOrderRequest updateOrderRequest)
         {
-            var updatedOrder = await _orderService.UpdateAsync(id, order);
+            var updateOrder = _mapper.Map<Order>(updateOrderRequest);
+            var updatedOrder = await _orderService.UpdateAsync(id, updateOrder);
             if (updatedOrder == null)
                 return NotFound();
             return Ok(updatedOrder);
