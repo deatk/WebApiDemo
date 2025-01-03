@@ -33,16 +33,6 @@ The project showcases best practices in API development, including a clean layer
 
 5. **README.md**  
    - This document, providing an overview of the project, structure, and features.
-  
-WebApiDemo\
-├── WebApiDemo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Main project containing the core API functionality\
-│   ├── Controllers&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# API controllers\
-│   └── Program.cs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Entry point of the application\
-├── WebApiDemoModels&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Project containing shared models and mappings\
-│   └── Mappings&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# AutoMapper profiles\
-├── WebApiDemoRepositories&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Data access layer\
-├── WebApiDemoServices&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Business logic and service layer\
-└── README.md
 
 ---
 
@@ -71,7 +61,7 @@ Clone the repository:
 
 bash\
 Copy code\
-git clone https://github.com/deatk/WebApiDemo.git\
+git clone https://github.com/deatk/WebApiDemo.git \
 cd WebApiDemo
 
 Restore dependencies:
@@ -94,25 +84,25 @@ bash\
 Copy code\
 dotnet run --project WebApiDemo
 
-The API will be accessible at http://localhost:5172 by default.
+The API will be accessible at http://localhost:5172/swagger by default.
 
 ---
 
-**Usage**
-The API provides endpoints for managing resources related to the domain models. 
+**Usage**\
+The API provides endpoints for managing resources related to the domain models.\
 Detailed API documentation and usage examples will be provided as the project progresses.
 
-**Contributing**
-This project is intended for educational purposes, and contributions are currently not being accepted. 
+**Contributing**\
+This project is intended for educational purposes, and contributions are currently not being accepted.\
 For any suggestions or feedback, please open an issue on the GitHub repository.
 
-**License**
-This project is licensed under the Creative Commons Attribution-NoDerivatives 4.0 International License. 
+**License**\
+This project is licensed under the Creative Commons Attribution-NoDerivatives 4.0 International License.\
 This means you are free to share the material in any medium or format under the following terms:
 
-**Attribution**: You must give appropriate credit, provide a link to the license, and indicate if changes were made.
+**Attribution**: You must give appropriate credit, provide a link to the license, and indicate if changes were made.\
 You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.
 
 **NoDerivatives**: If you remix, transform, or build upon the material, you may not distribute the modified material.
 
-For more details, refer to the license deed.
+For more details, refer to the license deed: https://creativecommons.org/licenses/by/4.0/deed.en.
