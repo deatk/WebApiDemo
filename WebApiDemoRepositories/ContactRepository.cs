@@ -11,6 +11,14 @@ namespace WebApiDemoRepositories
         public ContactRepository(IMongoDatabase database)
         {
             _contacts = database.GetCollection<Contact>("Contacts");
+
+            // Ensure unique index on Email
+            var emailIndex = Builders<Contact>.IndexKeys.Ascending(c => c.Email);
+            _contacts.Indexes.CreateOne(new CreateIndexModel<Contact>(emailIndex, new CreateIndexOptions { Unique = true }));
+
+            // Ensure unique index on PhoneNumber
+            var phoneIndex = Builders<Contact>.IndexKeys.Ascending(c => c.PhoneNumber);
+            _contacts.Indexes.CreateOne(new CreateIndexModel<Contact>(phoneIndex, new CreateIndexOptions { Unique = true }));
         }
 
         public async Task<List<Contact>> GetAllAsync()
@@ -35,14 +43,33 @@ namespace WebApiDemoRepositories
 
         public async Task<Contact> CreateAsync(Contact contact)
         {
-            await _contacts.InsertOneAsync(contact);
-            return contact;
+            if (string.IsNullOrWhiteSpace(contact.Id))
+            {
+                contact.Id = Guid.NewGuid().ToString(); // Generate a unique ID if not provided
+            }
+
+            try
+            {
+                await _contacts.InsertOneAsync(contact);
+                return contact;
+            }
+            catch (MongoWriteException ex) when (ex.WriteError.Category == ServerErrorCategory.DuplicateKey)
+            {
+                throw new InvalidOperationException("A contact with the same email or phone number already exists.", ex);
+            }
         }
 
         public async Task<bool> UpdateAsync(string id, Contact contact)
         {
-            var result = await _contacts.ReplaceOneAsync(c => c.Id == id, contact);
-            return result.ModifiedCount > 0;
+            try
+            {
+                var result = await _contacts.ReplaceOneAsync(c => c.Id == id, contact);
+                return result.ModifiedCount > 0;
+            }
+            catch (MongoWriteException ex) when (ex.WriteError.Category == ServerErrorCategory.DuplicateKey)
+            {
+                throw new InvalidOperationException("A contact with the same email or phone number already exists.", ex);
+            }
         }
 
         public async Task<bool> DeleteAsync(string id)

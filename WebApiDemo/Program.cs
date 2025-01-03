@@ -1,5 +1,6 @@
 using WebApiDemo.Configurations;
 using WebApiDemoServices;
+using WebApiDemoModels.Mappings;
 using WebApiDemoRepositories;
 using Serilog;
 
@@ -10,10 +11,11 @@ builder.Configuration.AddJsonFile("connections.json", optional: false, reloadOnC
 
 // Add services to the container.
 builder.Services.AddApplicationServices();
-builder.Services.AddRepositoryServices(); // Ensure this matches the method name in ServiceCollectionExtensions.cs
-builder.Services.AddAutoMapper();
+builder.Services.AddRepositoryServices();
+//builder.Services.AddAutoMapper();
+builder.Services.AddAutoMapper(typeof(ContactMappingProfile).Assembly);
 builder.Services.AddSerilog();
-builder.Services.AddMongoDbServices(builder.Configuration); // Ensure this matches the method name in MongoDbExtensions.cs
+builder.Services.AddMongoDbServices(builder.Configuration);
 builder.Services.AddControllers();
 
 // Add Swagger services

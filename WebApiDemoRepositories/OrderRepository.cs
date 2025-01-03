@@ -25,6 +25,16 @@ namespace WebApiDemoRepositories
 
         public async Task<Order> CreateAsync(Order order)
         {
+            if (string.IsNullOrWhiteSpace(order.Id))
+            {
+                order.Id = Guid.NewGuid().ToString(); // Generate a unique ID if not provided
+            }
+
+            if (order.OrderDate == default)
+            {
+                order.OrderDate = DateTime.UtcNow; // Set the order time to now if not provided
+            }
+
             await _orders.InsertOneAsync(order);
             return order;
         }

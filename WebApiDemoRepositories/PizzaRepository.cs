@@ -18,9 +18,9 @@ namespace WebApiDemoRepositories
             return await _collection.Find(_ => true).ToListAsync();
         }
 
-        public async Task<Pizza?> GetByIdAsync(string id)
+        public async Task<Pizza?> GetByIdAsync(string name)
         {
-            return await _collection.Find(p => p.Id == id).FirstOrDefaultAsync();
+            return await _collection.Find(p => p.Name == name).FirstOrDefaultAsync();
         }
 
         public async Task AddAsync(Pizza pizza)
@@ -30,12 +30,12 @@ namespace WebApiDemoRepositories
 
         public async Task UpdateAsync(Pizza pizza)
         {
-            await _collection.ReplaceOneAsync(p => p.Id == pizza.Id, pizza);
+            await _collection.ReplaceOneAsync(p => p.Name == pizza.Name, pizza);
         }
 
-        public async Task DeleteAsync(string id)
+        public async Task DeleteAsync(string name)
         {
-            await _collection.DeleteOneAsync(p => p.Id == id);
+            await _collection.DeleteOneAsync(p => p.Name == name);
         }
     }
 }
