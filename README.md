@@ -4,6 +4,7 @@ The project showcases best practices in API development, including a clean layer
 
 Project Structure
 The solution is organized into the following projects:
+
 WebApiDemo
 ├── WebApiDemo             # Main project containing the core API functionality
 │   ├── Controllers        # API controllers
