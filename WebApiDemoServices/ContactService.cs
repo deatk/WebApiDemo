@@ -17,7 +17,7 @@ public class ContactService : IContactService
         return contacts;
     }
 
-    public async Task<Contact?> GetByIdAsync(string id)
+    public async Task<Contact> GetByIdAsync(string id)
     {
         var contact = await _contactRepository.GetByIdAsync(id);
         return contact;
@@ -30,7 +30,7 @@ public class ContactService : IContactService
         return contact;
     }
 
-    public async Task<Contact?> GetByEmailAsync(string email)
+    public async Task<Contact> GetByEmailAsync(string email)
     {
         var contacts = await _contactRepository.GetAllAsync();
         var contact = contacts.FirstOrDefault(c => c.Email == email);

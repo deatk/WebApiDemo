@@ -1,32 +1,19 @@
-using AutoMapper;
-using Serilog;
-using WebApiDemoServices.Interfaces;
+using WebApiDemo.Configurations;
 using WebApiDemoServices;
 using WebApiDemoRepositories;
-using WebApiDemoModels;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add file connections.json
 builder.Configuration.AddJsonFile("connections.json", optional: false, reloadOnChange: true);
 
-// Add AutoMapper with profiles
-builder.Services.AddAutoMapper(typeof(Program).Assembly);
-
-// Add MongoDB repository
-builder.Services.AddMongoDbRepository(builder.Configuration);
-
-// Set up Serilog with Console and File sinks
-Log.Logger = new LoggerConfiguration()
-    .WriteTo.Console()  
-    .WriteTo.File(Path.Combine(AppContext.BaseDirectory, "logs", "log.txt"), rollingInterval: RollingInterval.Day)
-    .CreateLogger();
-
-// Add Serilog as the logging provider
-builder.Host.UseSerilog();
-
 // Add services to the container.
-builder.Services.AddScoped<IContactService, ContactService>();
+builder.Services.AddApplicationServices();
+builder.Services.AddRepositoryServices(); // Ensure this matches the method name in ServiceCollectionExtensions.cs
+builder.Services.AddAutoMapper();
+builder.Services.AddSerilog();
+builder.Services.AddMongoDbServices(builder.Configuration); // Ensure this matches the method name in MongoDbExtensions.cs
 builder.Services.AddControllers();
 
 // Add Swagger services
