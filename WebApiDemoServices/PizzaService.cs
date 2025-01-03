@@ -18,9 +18,9 @@ namespace WebApiDemoServices
             return await _pizzaRepository.GetAllAsync();
         }
 
-        public async Task<Pizza?> GetByIdAsync(string id)
+        public async Task<Pizza?> GetByNameAsync(string name)
         {
-            return await _pizzaRepository.GetByIdAsync(id);
+            return await _pizzaRepository.GetByNameAsync(name);
         }
 
         public async Task AddAsync(Pizza pizza)

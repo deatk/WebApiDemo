@@ -1,3 +1,9 @@
+C:\Users\aless\Documents\Projects\WebApiDemo\WebApiDemoServices\obj\Debug\net9.0\WebApiDemoServices.csproj.AssemblyReference.cache
+C:\Users\aless\Documents\Projects\WebApiDemo\WebApiDemoServices\obj\Debug\net9.0\WebApiDemoServices.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aless\Documents\Projects\WebApiDemo\WebApiDemoServices\obj\Debug\net9.0\WebApiDemoServices.AssemblyInfoInputs.cache
+C:\Users\aless\Documents\Projects\WebApiDemo\WebApiDemoServices\obj\Debug\net9.0\WebApiDemoServices.AssemblyInfo.cs
+C:\Users\aless\Documents\Projects\WebApiDemo\WebApiDemoServices\obj\Debug\net9.0\WebApiDemoServices.csproj.CoreCompileInputs.cache
+C:\Users\aless\Documents\Projects\WebApiDemo\WebApiDemoServices\obj\Debug\net9.0\WebApiDemoServices.sourcelink.json
 C:\Users\aless\Documents\Projects\WebApiDemo\WebApiDemoServices\bin\Debug\net9.0\WebApiDemoServices.deps.json
 C:\Users\aless\Documents\Projects\WebApiDemo\WebApiDemoServices\bin\Debug\net9.0\WebApiDemoServices.dll
 C:\Users\aless\Documents\Projects\WebApiDemo\WebApiDemoServices\bin\Debug\net9.0\WebApiDemoServices.pdb
@@ -5,12 +11,6 @@ C:\Users\aless\Documents\Projects\WebApiDemo\WebApiDemoServices\bin\Debug\net9.0
 C:\Users\aless\Documents\Projects\WebApiDemo\WebApiDemoServices\bin\Debug\net9.0\WebApiDemoRepositories.dll
 C:\Users\aless\Documents\Projects\WebApiDemo\WebApiDemoServices\bin\Debug\net9.0\WebApiDemoRepositories.pdb
 C:\Users\aless\Documents\Projects\WebApiDemo\WebApiDemoServices\bin\Debug\net9.0\WebApiDemoModels.pdb
-C:\Users\aless\Documents\Projects\WebApiDemo\WebApiDemoServices\obj\Debug\net9.0\WebApiDemoServices.csproj.AssemblyReference.cache
-C:\Users\aless\Documents\Projects\WebApiDemo\WebApiDemoServices\obj\Debug\net9.0\WebApiDemoServices.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\aless\Documents\Projects\WebApiDemo\WebApiDemoServices\obj\Debug\net9.0\WebApiDemoServices.AssemblyInfoInputs.cache
-C:\Users\aless\Documents\Projects\WebApiDemo\WebApiDemoServices\obj\Debug\net9.0\WebApiDemoServices.AssemblyInfo.cs
-C:\Users\aless\Documents\Projects\WebApiDemo\WebApiDemoServices\obj\Debug\net9.0\WebApiDemoServices.csproj.CoreCompileInputs.cache
-C:\Users\aless\Documents\Projects\WebApiDemo\WebApiDemoServices\obj\Debug\net9.0\WebApiDemoServices.sourcelink.json
 C:\Users\aless\Documents\Projects\WebApiDemo\WebApiDemoServices\obj\Debug\net9.0\WebApiDe.DE5F8BD9.Up2Date
 C:\Users\aless\Documents\Projects\WebApiDemo\WebApiDemoServices\obj\Debug\net9.0\WebApiDemoServices.dll
 C:\Users\aless\Documents\Projects\WebApiDemo\WebApiDemoServices\obj\Debug\net9.0\refint\WebApiDemoServices.dll

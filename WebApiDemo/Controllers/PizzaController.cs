@@ -27,9 +27,9 @@ namespace WebApiDemo.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetById(string id)
+        public async Task<IActionResult> GetByName(string name)
         {
-            var pizza = await _pizzaService.GetByIdAsync(id);
+            var pizza = await _pizzaService.GetByNameAsync(name);
             if (pizza == null)
             {
                 return NotFound();
