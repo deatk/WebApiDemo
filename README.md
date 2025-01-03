@@ -1,27 +1,61 @@
-**WebApiDemo**
+### WebApiDemo
 
 WebApiDemo is an educational project aimed at demonstrating the development of a RESTful API using ASP.NET Core. 
 The project showcases best practices in API development, including a clean layered architecture, model mapping, and unit testing.
 
-**Project Structure**
-The solution is organized into the following projects:
+---
 
-WebApiDemo ├── WebApiDemo # Main project containing the core API functionality │ ├── Controllers # API controllers │ └── Program.cs # Entry point of the application ├── WebApiDemoModels # Project containing shared models and mappings │ └── Mappings # AutoMapper profiles (if any) ├── WebApiDemoRepositories # Data access layer ├── WebApiDemoServices # Business logic and service layer └── README.md # Project documentation
+### Key Features
 
-WebApiDemo: The main ASP.NET Core Web API project responsible for handling HTTP requests and responses.
+- **RESTful API** built with ASP.NET Core.
+- **Clean Architecture**: Logical separation of concerns into layers.
+- **Clean Code**: Readable, maintainable, and testable codebase.
+- **Repository Pattern**: Decoupling data access logic.
+- Easy extensibility and scalability for future enhancements.
 
-WebApiDemoModels: Contains the domain models and mapping configurations. This includes Entities, Request Objects and AutoMapper profiles for model mapping.
+### Folder and Subproject Details
 
-WebApiDemoRepositories: Implements the data access layer, managing database operations and interactions.
+1. **WebApiDemo**  
+   - Contains the entry point (`Program.cs`) and the main logic for handling HTTP requests.
+   - Includes `Controllers`, which define endpoints and handle API interactions.
 
-WebApiDemoServices: Contains the business logic and service layer, processing data between the controller and repository layers.
+2. **WebApiDemoModels**  
+   - Contains shared entity models and mappings.  
+   - Includes AutoMapper profiles for mapping between domain models and database entities (if applicable).
 
-WebApiDemoTests: (To be implemented) Will include unit and integration tests to ensure the application's reliability and correctness.
+3. **WebApiDemoRepositories**  
+   - Implements the Repository Pattern for abstracting database operations.
+   - Ensures a clean separation between the business logic and data access layers.
 
-the *connection.json* file must be created locally using the structure provided in the *connections.example.json*
+4. **WebApiDemoServices**  
+   - Houses the service layer that contains business logic.
+   - Orchestrates data flow between controllers and repositories.
+
+5. **README.md**  
+   - This document, providing an overview of the project, structure, and features.
+
+---
+
+## Principles Followed
+
+### Clean Code
+
+- **Readability**: Clear naming conventions and minimal inline comments.
+- **Maintainability**: Modular and self-explanatory methods and classes.
+- **Testability**: Encourages the use of unit tests to validate logic (future implementation).
+
+### Clean Architecture
+
+- **Independent of Frameworks**: Business logic is not tightly coupled to ASP.NET Core or other libraries.
+- **Separation of Concerns**: Each layer has a distinct responsibility, ensuring that changes in one layer don't propagate unnecessary changes to others.
+- **Scalable and Extensible**: The architecture supports easy addition of new features or layers without disrupting existing functionality.
+
+---
 
 **Getting Started**
 To run this project locally, follow these steps:
+
+the *connection.json* file must be created locally using the structure provided in the *connections.example.json*
 
 Clone the repository:
 
@@ -48,6 +82,8 @@ Copy code
 dotnet run --project WebApiDemo
 
 The API will be accessible at http://localhost:5172 by default.
+
+---
 
 **Usage**
 The API provides endpoints for managing resources related to the domain models. 
