@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using WebApiDemoModels.Enums;
 
 namespace WebApiDemoModels.Requests
 {
@@ -11,6 +12,6 @@ namespace WebApiDemoModels.Requests
         [Required]
         public decimal Price { get; set; }
         [Required]
-        public List<string> Ingredients { get; set; }
+        public List<Toppings> Ingredients { get; set; }
     }
 }
