@@ -21,7 +21,7 @@ The project showcases best practices in API development, including a clean layer
 
 2. **WebApiDemoModels**  
    - Contains shared entity models and mappings.  
-   - Includes AutoMapper profiles for mapping between domain models and database entities (if applicable).
+   - Includes AutoMapper profiles for mapping between domain models and database entities.
 
 3. **WebApiDemoRepositories**  
    - Implements the Repository Pattern for abstracting database operations.
@@ -33,6 +33,16 @@ The project showcases best practices in API development, including a clean layer
 
 5. **README.md**  
    - This document, providing an overview of the project, structure, and features.
+  
+WebApiDemo\
+├── WebApiDemo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Main project containing the core API functionality\
+│   ├── Controllers&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# API controllers\
+│   └── Program.cs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Entry point of the application\
+├── WebApiDemoModels&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Project containing shared models and mappings\
+│   └── Mappings&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# AutoMapper profiles\
+├── WebApiDemoRepositories&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Data access layer\
+├── WebApiDemoServices&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Business logic and service layer\
+└── README.md
 
 ---
 
@@ -59,26 +69,29 @@ the *connection.json* file must be created locally using the structure provided 
 
 Clone the repository:
 
-bash
-Copy code
-git clone https://github.com/deatk/WebApiDemo.git
+bash\
+Copy code\
+git clone https://github.com/deatk/WebApiDemo.git\
 cd WebApiDemo
+
 Restore dependencies:
 
 Ensure you have the .NET SDK installed. Then, run:
 
-bash
-Copy code
+bash\
+Copy code\
 dotnet restore
+
 Build the solution:
 
-bash
-Copy code
+bash\
+Copy code\
 dotnet build
+
 Run the application:
 
-bash
-Copy code
+bash\
+Copy code\
 dotnet run --project WebApiDemo
 
 The API will be accessible at http://localhost:5172 by default.
