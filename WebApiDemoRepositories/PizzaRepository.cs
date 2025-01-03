@@ -18,7 +18,7 @@ namespace WebApiDemoRepositories
             return await _collection.Find(_ => true).ToListAsync();
         }
 
-        public async Task<Pizza?> GetByIdAsync(string name)
+        public async Task<Pizza?> GetByNameAsync(string name)
         {
             return await _collection.Find(p => p.Name == name).FirstOrDefaultAsync();
         }
