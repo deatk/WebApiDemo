@@ -53,7 +53,7 @@ Run the application:
 bash
 Copy code
 dotnet run --project WebApiDemo
-The API will be accessible at https://localhost:5001 by default.
+The API will be accessible at http://localhost:5172 by default.
 
 Usage
 The API provides endpoints for managing resources related to the domain models. 
