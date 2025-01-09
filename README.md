@@ -88,7 +88,15 @@ The API will be accessible at http://localhost:5172/swagger by default.
 
 ---
 
-**Usage**\
+## Usage
+
 The API provides endpoints for managing resources related to the domain models.\
 Detailed API documentation and usage examples will be provided as the project progresses.
+
+---
+
+## Additional Notes
+
+**MongoDB**: This project currently uses the free version of MongoDB.
+**Budget**: The project is being developed without any budget and is entirely free.
 
