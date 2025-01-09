@@ -40,6 +40,11 @@ namespace WebApiDemo.Controllers
         [HttpPost]
         public async Task<IActionResult> Create([FromBody] CreatePizzaRequest createPizzaRequest)
         {
+            if(!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+            
             var pizza = _mapper.Map<Pizza>(createPizzaRequest);
             await _pizzaService.AddAsync(pizza);
             return CreatedAtAction(nameof(GetAll), null);

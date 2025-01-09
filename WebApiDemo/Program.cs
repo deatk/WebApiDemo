@@ -1,8 +1,10 @@
+using FluentValidation.AspNetCore;
+using Serilog;
 using WebApiDemo.Configurations;
 using WebApiDemoServices;
-using WebApiDemoModels.Mappings;
 using WebApiDemoRepositories;
-using Serilog;
+using WebApiDemoModels.Mappings;
+using WebApiDemoModels.Validators;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,11 +14,11 @@ builder.Configuration.AddJsonFile("connections.json", optional: false, reloadOnC
 // Add services to the container.
 builder.Services.AddApplicationServices();
 builder.Services.AddRepositoryServices();
-//builder.Services.AddAutoMapper();
 builder.Services.AddAutoMapper(typeof(ContactMappingProfile).Assembly);
 builder.Services.AddSerilog();
 builder.Services.AddMongoDbServices(builder.Configuration);
-builder.Services.AddControllers();
+builder.Services.AddControllers()
+    .AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<PizzaRequestValidator>());
 
 // Add Swagger services
 builder.Services.AddEndpointsApiExplorer();
