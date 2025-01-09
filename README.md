@@ -92,17 +92,3 @@ The API will be accessible at http://localhost:5172/swagger by default.
 The API provides endpoints for managing resources related to the domain models.\
 Detailed API documentation and usage examples will be provided as the project progresses.
 
-**Contributing**\
-This project is intended for educational purposes, and contributions are currently not being accepted.\
-For any suggestions or feedback, please open an issue on the GitHub repository.
-
-**License**\
-This project is licensed under the Creative Commons Attribution-NoDerivatives 4.0 International License.\
-This means you are free to share the material in any medium or format under the following terms:
-
-**Attribution**: You must give appropriate credit, provide a link to the license, and indicate if changes were made.\
-You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.
-
-**NoDerivatives**: If you remix, transform, or build upon the material, you may not distribute the modified material.
-
-For more details, refer to the license deed: https://creativecommons.org/licenses/by/4.0/deed.en.
